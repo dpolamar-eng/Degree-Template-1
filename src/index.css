@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #101014; /* Ink Black */
+    color: #F7F7F5;
+  }
+  
+  body {
+    @apply font-body bg-lumora-dark text-lumora-bg;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-lumora-pink text-lumora-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Yearbook Chapter Number Background styling */
+  .chapter-number-bg {
+    @apply absolute -z-10 font-accent text-[20vw] lg:text-[15vw] text-lumora-bg/5 leading-none select-none pointer-events-none;
+  }
+  
+  .chapter-number-bg-light {
+    @apply absolute -z-10 font-accent text-[20vw] lg:text-[15vw] text-lumora-dark/5 leading-none select-none pointer-events-none;
+  }
+}
